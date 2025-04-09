@@ -1,0 +1,121 @@
+.footer {
+    background: rgb(31, 41, 55); /* #1a1919 */
+    color: white;
+    padding: 4rem 2rem 1.5rem 2rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+}
+
+.subscribe-form {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.subscribe-form input {
+    flex: 1;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 8px;
+    transition: background-color 0.4s;
+}
+.subscribe-form input:focus {
+    background: rgba(255, 255, 255, 0.8);
+    color: black;
+    outline: none;
+}
+
+.subscribe-form button {
+    padding: 0.75rem 1.5rem;
+    background: #ff0000;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.subscribe-form button:hover {
+    background: #cc0000;
+}
+
+.social-section {
+    display: flex;
+    gap: 25px;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.2rem;
+}
+.social-icons {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.social-icons svg {
+    width: 28px;
+    height: 28px;
+    color: red;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a:hover svg {
+    transform: translateY(-5px);
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 2.5rem auto 0 auto;
+    padding-top: 0.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+}
+
+.footer-bottom .tagline {
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+.footer-bottom .copyright {
+    margin-top: 5px;
+    font-size: 0.8rem;
+    color: white;
+    text-transform: lowercase;
+    letter-spacing: 1px;
+}
+
+.scroll-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    /* opacity: 0; */
+    /* visibility: hidden; */
+    z-index: 1000;
+}
+
+.scroll-top:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: #ff0000;
+    transform: translateY(-5px);
+}
+
+.scroll-top svg {
+    width: 24px;
+    height: 24px;
+}

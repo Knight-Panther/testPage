@@ -1,0 +1,111 @@
+/* Sticky Header Styles - Combined */
+header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background: linear-gradient(90deg, #1e3a8a, #3b82f6);
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1001;
+    transition: all 0.3s ease;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container img {
+    height: 3.5rem;
+    width: 3.5rem;
+    margin-right: 1rem;
+    border-radius: 50%;
+    border: 1.5px solid white;
+}
+
+.logo-container span {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.05rem;
+    text-transform: uppercase;
+}
+
+/* Main menu selecetion i.e Home, Team etc. */
+.main-menu {
+    display: flex;
+    gap: 2rem;
+}
+
+.main-menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.main-menu a:hover {
+    color: #dbeafe;
+}
+
+.main-menu a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: #dbeafe;
+    transition: width 0.3s ease;
+}
+
+.main-menu a:hover::after {
+    width: 100%;
+}
+
+/* Mobile menu toggle - hidden by default */
+.mobile-menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: whitesmoke;
+    font-weight: bold;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .main-menu {
+        position: fixed;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background: linear-gradient(90deg, #1e3a8a, #3b82f6);
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem 0;
+        gap: 1rem;
+        transform: translateY(-150%);
+        transition: transform 0.4s ease;
+    }
+
+    .main-menu.mobile-menu-open {
+        transform: translateY(0);
+    }
+
+    .mobile-menu-toggle {
+        display: block;
+    }
+
+    .main-menu a::after {
+        bottom: -2px;
+    }
+}

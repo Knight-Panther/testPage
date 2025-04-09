@@ -1,0 +1,68 @@
+/* Rest of your existing styles */
+main {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2rem 1rem;
+}
+
+main .search-filter {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#search {
+    padding: 0.5rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.375rem;
+    width: 100%;
+}
+
+#sectorFilter {
+    padding: 0.5rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.375rem;
+    width: 100%;
+}
+
+#statusFilter {
+    padding: 0.5rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.375rem;
+    width: 20%;
+}
+
+#listings {
+    display: grid;
+    gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    main .search-filter {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    #search {
+        width: 30%;
+    }
+
+    #sectorFilter {
+        width: 15%;
+    }
+    #statusFilter {
+        width: 10%;
+    }
+
+    #listings {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    #listings {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
