@@ -6,7 +6,7 @@ let businesses = [];
 // Function to fetch data from businesses.json
 async function fetchBusinesses() {
     try {
-        const response = await fetch("/backend/businesses.json");
+        const response = await fetch("businesses.json");
         if (!response.ok) {
             throw new Error("Network response was not ok");
         }
@@ -19,7 +19,7 @@ async function fetchBusinesses() {
             // Build correct path based on your actual file structure
             return {
                 ...business,
-                image: `/public/assets/images/${imagePath}`,
+                image: `assets/images/${imagePath}`,
             };
         });
 
